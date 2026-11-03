@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyLGS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myLGS Ideenmagnet</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-    
+  <header class="kopfzeile">
+    <h1>myLGS Ideenmagnet</h1>
+    <a href="#idee-einreichen">Idee einreichen</a>
+  </header>
 
+  <main>
+    <section class="intro">
+      <h2>Gute Ideen für unsere Schule</h2>
+      <p>Teile deinen Vorschlag und stimme über Ideen anderer ab.</p>
+    </section>
 
-    
+    <section id="ideen">
+      <h2>Ideenübersicht</h2>
+
+      <label for="kategorie-filter">Nach Kategorie filtern:</label>
+      <select id="kategorie-filter">
+        <option value="alle">Alle Kategorien</option>
+        <option value="Schulgebäude">Schulgebäude</option>
+        <option value="Unterricht">Unterricht</option>
+        <option value="Pausen">Pausen</option>
+        <option value="Digitales">Digitales</option>
+      </select>
+
+      <label for="sortierung">Sortieren:</label>
+      <select id="sortierung">
+        <option value="stimmen">Meiste Stimmen zuerst</option>
+      </select>
+
+      <div id="ideen-liste" class="ideen-liste"></div>
+    </section>
+
+    <section id="idee-einreichen">
+      <h2>Neue Idee einreichen</h2>
+
+      <form id="ideen-formular">
+        <label for="titel">Titel:</label>
+        <input
+          type="text"
+          id="titel"
+          name="titel"
+          maxlength="80"
+          required
+        >
+
+        <label for="kategorie">Kategorie:</label>
+        <select id="kategorie" name="kategorie" required>
+          <option value="">Bitte auswählen</option>
+          <option value="Schulgebäude">Schulgebäude</option>
+          <option value="Unterricht">Unterricht</option>
+          <option value="Pausen">Pausen</option>
+          <option value="Digitales">Digitales</option>
+        </select>
+
+        <label for="beschreibung">Beschreibung:</label>
+        <textarea
+          id="beschreibung"
+          name="beschreibung"
+          rows="5"
+          minlength="10"
+          maxlength="1000"
+          required
+        ></textarea>
+
+        <button type="submit">Idee einreichen</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>myLGS Ideenmagnet – ein Schulprojekt</p>
+  </footer>
 </body>
 </html>
