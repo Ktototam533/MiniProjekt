@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #202b38;
+  background-color: #f3f6fa;
+}
+
+.kopfzeile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8%;
+  color: white;
+  background-color: #174a7e;
+}
+
+.kopfzeile a {
+  color: white;
+}
+
+main {
+  width: min(900px, 90%);
+  margin: 30px auto;
+}
+
+section {
+  margin-bottom: 28px;
+  padding: 22px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  background-color: #174a7e;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0e345a;
+}
+
+.idee-karte {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: #526171;
+}
